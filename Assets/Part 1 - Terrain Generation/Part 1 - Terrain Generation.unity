@@ -121,6 +121,60 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &109098614
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 109098616}
+  - component: {fileID: 109098615}
+  m_Layer: 0
+  m_Name: Mars Terrain - Triangle Mesh
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &109098615
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 109098614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29f3ae525a1d97049bcee60f2aca54a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  heightMapTexture: {fileID: 2800000, guid: 5196f889f225fa54c8a99b1e6c46f288, type: 3}
+  heightScale: 15
+  colourMaps:
+  - minValue: -1
+    colour: {r: 0.6037736, g: 0.33009806, b: 0.09967959, a: 1}
+  - minValue: 0.1
+    colour: {r: 0.754717, g: 0.44283128, b: 0.20291919, a: 1}
+  - minValue: 0.2
+    colour: {r: 0.7830189, g: 0.54382277, b: 0.2622375, a: 1}
+  - minValue: 0.3
+    colour: {r: 0.8396226, g: 0.64287144, b: 0.41585082, a: 1}
+--- !u!4 &109098616
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 109098614}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &433527354
 GameObject:
   m_ObjectHideFlags: 0
