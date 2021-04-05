@@ -219,7 +219,7 @@ MonoBehaviour:
     colour: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   - minValue: 0.6
     colour: {r: 1, g: 1, b: 1, a: 1}
-  objectMap: {fileID: 2800000, guid: 0cc4acece98c8a94c9ffc53dfffe9c4a, type: 3}
+  objectMap: {fileID: 2800000, guid: 76334793a02bc7a48a7f8da8e78fd2df, type: 3}
   objectToPut:
   - {fileID: 1000010826647866, guid: b060c82fc5ecfc24fa9d4c53b3ebbe2e, type: 3}
   - {fileID: 108292, guid: 71b083a0cf9ea6043871c9e333764617, type: 3}

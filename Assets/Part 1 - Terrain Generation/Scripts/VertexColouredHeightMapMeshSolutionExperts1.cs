@@ -133,14 +133,14 @@ public class VertexColouredHeightMapMeshSolutionExperts1 : MonoBehaviour
 
                
             
-                if (objectMap.GetPixel(x, z).r > 0.05)
+                if (objectMap.GetPixel(x, z).r > 0.5)
                 {
                     Debug.Log("R value: " + objectMap.GetPixel(x, z).r);
                     objectPosR.Add(new Vector3(x, yVal * heightScale, z));
     
                 }
 
-                if (objectMap.GetPixel(x, z).b > 0.05)
+                if (objectMap.GetPixel(x, z).b > 0.5)
                 {
                     Debug.Log("B value: " + objectMap.GetPixel(x, z).b);
                     objectPosB.Add(new Vector3(x, yVal * heightScale, z));
@@ -211,7 +211,7 @@ public class VertexColouredHeightMapMeshSolutionExperts1 : MonoBehaviour
 
         for (int i = 0; i <= objectPosB.Count - 1; i++)
         {
-            Instantiate(objectToPut[1], objectPosR[i], Quaternion.identity);
+            Instantiate(objectToPut[1], objectPosB[i], Quaternion.identity);
         }
 
     }
