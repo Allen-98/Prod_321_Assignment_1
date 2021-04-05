@@ -17,6 +17,8 @@ using UnityEngine;
 
 public class VertexColouredHeightMapMeshSolutionExperts1 : MonoBehaviour
 {
+
+    [Header("Terrain Generation")]
     // Defines the height map texture used to create the mesh and set the heights
     public Texture2D heightMapTexture;
 
@@ -26,6 +28,8 @@ public class VertexColouredHeightMapMeshSolutionExperts1 : MonoBehaviour
     // Create a new public structure to store our colour map values
     // This will take a "minValue" which is the minimum height, as well
     // as the colour to apply if the vertex is above this height
+
+    
     [System.Serializable]
     public struct ColourMap
     {
@@ -58,6 +62,14 @@ public class VertexColouredHeightMapMeshSolutionExperts1 : MonoBehaviour
         new ColourMap(0.9f, Color.white)
     };
 
+    [Header("Object Placement")]
+    public Texture2D objectMap;
+    public GameObject[] objectToPut;
+
+
+
+
+
     // This function will return the mapped colour based on a height value
     Color getMappedColour(float height)
     {
@@ -86,10 +98,19 @@ public class VertexColouredHeightMapMeshSolutionExperts1 : MonoBehaviour
         // Create a list to store our vertex colours
         List<Color> vertexColours = new List<Color>();
 
+
+        List<Vector3> objectPosR = new List<Vector3>();
+
+        List<Vector3> objectPosB = new List<Vector3>();
+
         // Calculate the Height and Width of our mesh from the heightmap's
         // height and width 
         int height = heightMapTexture.height;
         int width = heightMapTexture.width;
+
+
+        
+
 
         // Generate our Vertices
         // Loop through the meshes length and width
@@ -107,6 +128,26 @@ public class VertexColouredHeightMapMeshSolutionExperts1 : MonoBehaviour
                 // y value
                 float yVal = heightMapTexture.GetPixel(x, z).r;
                 vertices.Add(new Vector3(x, yVal * heightScale, z));
+
+                // check the object placement
+
+               
+            
+                if (objectMap.GetPixel(x, z).r > 0.05)
+                {
+                    Debug.Log("R value: " + objectMap.GetPixel(x, z).r);
+                    objectPosR.Add(new Vector3(x, yVal * heightScale, z));
+    
+                }
+
+                if (objectMap.GetPixel(x, z).b > 0.05)
+                {
+                    Debug.Log("B value: " + objectMap.GetPixel(x, z).b);
+                    objectPosB.Add(new Vector3(x, yVal * heightScale, z));
+                }
+                
+                
+
 
                 // Add the vertex colour using the getMappedColour function for
                 // the yVal at this pixel
@@ -161,6 +202,17 @@ public class VertexColouredHeightMapMeshSolutionExperts1 : MonoBehaviour
         // Surface Shader
         MeshRenderer meshRenderer = gameObject.AddComponent<MeshRenderer>();
         meshRenderer.material = new Material(Shader.Find("Custom/ColouredVertexSurfaceShader"));
+
+        
+        for (int i = 0; i <= objectPosR.Count - 1; i++)
+        {
+            Instantiate(objectToPut[0], objectPosR[i], Quaternion.identity);
+        }
+
+        for (int i = 0; i <= objectPosB.Count - 1; i++)
+        {
+            Instantiate(objectToPut[1], objectPosR[i], Quaternion.identity);
+        }
 
     }
 }
