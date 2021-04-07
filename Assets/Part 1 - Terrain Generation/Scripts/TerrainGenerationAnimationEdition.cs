@@ -35,9 +35,26 @@ public class TerrainGenerationAnimationEdition : MonoBehaviour
     };
     Color getMappedColour(float height)
     {
+
         for (int i = colourMaps.Count - 1; i >= 0; i--)
-            if (height > colourMaps[i].minValue)
-                return colourMaps[i].colour;
+            if (!seasonIsChanged)
+            {
+                if (height > colourMaps[i].minValue)
+                    return colourMaps[i].colour;
+            }
+            else
+            {
+                if (height > colourMaps[i].minValue)
+                    if (height > 0.18 && height < 0.5)
+                    {
+                        return Color.yellow;
+                    }
+                    else
+                    {
+                        return colourMaps[i].colour;
+                    }
+
+            }
         return Color.white;
     }
 
@@ -64,12 +81,12 @@ public class TerrainGenerationAnimationEdition : MonoBehaviour
 
     // other things
     MeshFilter meshFilter;
-
-
+    bool seasonIsChanged;
 
     // Start is called before the first frame update
     void Start()
     {
+        seasonIsChanged = false;
 
         List<Vector3> vertices = new List<Vector3>();
 
@@ -103,14 +120,12 @@ public class TerrainGenerationAnimationEdition : MonoBehaviour
                 {
                     if (objectMap.GetPixel(x, z).r > 0.5)
                     {
-                        Debug.Log("R value: " + objectMap.GetPixel(x, z).r);
                         objectPosR.Add(new Vector3(x, yVal * heightScale, z));
 
                     }
 
                     if (objectMap.GetPixel(x, z).b > 0.5)
                     {
-                        Debug.Log("B value: " + objectMap.GetPixel(x, z).b);
                         objectPosB.Add(new Vector3(x, yVal * heightScale, z));
                     }
                 }
@@ -186,7 +201,7 @@ public class TerrainGenerationAnimationEdition : MonoBehaviour
         int width = heightMapTexture.width;
 
         List<Vector3> aniVertices = new List<Vector3>();
-        List<Vector3> staticVertices = new List<Vector3>();
+       // List<Vector3> staticVertices = new List<Vector3>();
 
         for (int z = 0; z < height; z++)
         {
@@ -224,4 +239,38 @@ public class TerrainGenerationAnimationEdition : MonoBehaviour
         meshFilter.mesh.RecalculateNormals();
 
     }
+
+
+    public void SeasonChange()
+    {
+        if (seasonIsChanged)
+        {
+            seasonIsChanged = false;
+        }
+        else
+        {
+            seasonIsChanged = true;
+        }
+
+        int height = heightMapTexture.height;
+        int width = heightMapTexture.width;
+        List<Color> vertexColours = new List<Color>();
+
+
+        for (int z = 0; z < height; z++)
+        {
+            for (int x = 0; x < width; x++)
+            {
+
+                float yVal = heightMapTexture.GetPixel(x, z).r;
+
+                vertexColours.Add(getMappedColour(yVal));
+            }
+        }
+
+
+        meshFilter.mesh.colors = vertexColours.ToArray();
+
+    }
+
 }

@@ -321,13 +321,13 @@ MonoBehaviour:
   colourMaps:
   - minValue: -0.5
     colour: {r: 0, g: 0.23381615, b: 1, a: 1}
-  - minValue: 0.1
-    colour: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  - minValue: 0.2
+  - minValue: 0.08
+    colour: {r: 0.46226418, g: 0.429079, b: 0.04579032, a: 1}
+  - minValue: 0.18
     colour: {r: 0, g: 1, b: 0, a: 1}
-  - minValue: 0.6
+  - minValue: 0.5
     colour: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-  - minValue: 0.9
+  - minValue: 0.6
     colour: {r: 1, g: 1, b: 1, a: 1}
   HaveObjectsToPut: 1
   objectMap: {fileID: 2800000, guid: 76334793a02bc7a48a7f8da8e78fd2df, type: 3}
