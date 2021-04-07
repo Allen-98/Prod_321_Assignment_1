@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44385213, g: 0.48687285, b: 0.538523, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -161,6 +161,7 @@ MonoBehaviour:
     colour: {r: 0.7830189, g: 0.54382277, b: 0.2622375, a: 1}
   - minValue: 0.3
     colour: {r: 0.8396226, g: 0.64287144, b: 0.41585082, a: 1}
+  HaveObjectsToPut: 0
   objectMap: {fileID: 2800000, guid: c95f4a698cadb194187a955310eff170, type: 3}
   objectToPut:
   - {fileID: 195702, guid: eeade5eac92f39e439a9bf65b8f4007c, type: 3}
@@ -221,10 +222,11 @@ MonoBehaviour:
     colour: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   - minValue: 0.6
     colour: {r: 1, g: 1, b: 1, a: 1}
+  HaveObjectsToPut: 1
   objectMap: {fileID: 2800000, guid: 76334793a02bc7a48a7f8da8e78fd2df, type: 3}
   objectToPut:
   - {fileID: 1000010826647866, guid: b060c82fc5ecfc24fa9d4c53b3ebbe2e, type: 3}
-  - {fileID: 108292, guid: 71b083a0cf9ea6043871c9e333764617, type: 3}
+  - {fileID: 1000011979346856, guid: 9d20dd29c4cd94543905b0b4c642231c, type: 3}
 --- !u!4 &433527356
 Transform:
   m_ObjectHideFlags: 0
@@ -307,7 +309,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 1
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -324,13 +326,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 705507993}
-  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
+  m_LocalRotation: {x: 0.040277444, y: -0.2605002, z: 0.31894848, w: 0.91037863}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+  m_LocalEulerAnglesHint: {x: 13.857, y: -27.52, z: 35.206}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -389,7 +391,7 @@ Camera:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_RenderingPath: -1
+  m_RenderingPath: 3
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
   m_TargetEye: 3
@@ -452,6 +454,7 @@ MonoBehaviour:
     colour: {r: 0.8117648, g: 0.68235296, b: 0.5686275, a: 1}
   - minValue: 0.2
     colour: {r: 0.7264151, g: 0.62245995, b: 0.5311054, a: 1}
+  HaveObjectsToPut: 0
   objectMap: {fileID: 2800000, guid: bd8940d747bf5034b88f7c4e409d2178, type: 3}
   objectToPut:
   - {fileID: 123264, guid: 130a87a42aab600488e37e364f86e57d, type: 3}
