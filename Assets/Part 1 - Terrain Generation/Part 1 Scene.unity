@@ -196,7 +196,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &180341072
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -252,13 +252,14 @@ GameObject:
   m_Component:
   - component: {fileID: 433527356}
   - component: {fileID: 433527355}
+  - component: {fileID: 433527357}
   m_Layer: 0
   m_Name: Island Terrain - Triangle Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &433527355
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -266,7 +267,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 433527354}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 29f3ae525a1d97049bcee60f2aca54a8, type: 3}
   m_Name: 
@@ -303,6 +304,43 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &433527357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 433527354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02bb38bc710a3fa449378379cbec940a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  heightMapTexture: {fileID: 2800000, guid: dd980e59e7564de47ad3d53f19a170e7, type: 3}
+  heightScale: 30
+  colourMaps:
+  - minValue: -0.5
+    colour: {r: 0, g: 0.23381615, b: 1, a: 1}
+  - minValue: 0.1
+    colour: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  - minValue: 0.2
+    colour: {r: 0, g: 1, b: 0, a: 1}
+  - minValue: 0.6
+    colour: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  - minValue: 0.9
+    colour: {r: 1, g: 1, b: 1, a: 1}
+  HaveObjectsToPut: 1
+  objectMap: {fileID: 2800000, guid: 76334793a02bc7a48a7f8da8e78fd2df, type: 3}
+  objectToPut:
+  - {fileID: 1000010826647866, guid: b060c82fc5ecfc24fa9d4c53b3ebbe2e, type: 3}
+  - {fileID: 108292, guid: 71b083a0cf9ea6043871c9e333764617, type: 3}
+  DoAnimation: 1
+  aniHeightScale1: 3
+  aniPeriodScale1: 4
+  aniTimeScale1: 2
+  aniHeightScale2: 2
+  aniPeriodScale2: 2
+  aniTimeScale2: 2
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
