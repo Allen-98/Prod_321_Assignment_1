@@ -2,21 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
-
-public class TerrainGeneration : MonoBehaviour
+public class TerrainGenerationAnimationEdition : MonoBehaviour
 {
 
     [Header("Terrain Generation")]
-    
+
     public Texture2D heightMapTexture;
 
     public float heightScale = 30;
-    
+
     [System.Serializable]
     public struct ColourMap
     {
-        
+
         public float minValue;
 
         public Color colour;
@@ -49,6 +47,20 @@ public class TerrainGeneration : MonoBehaviour
     public bool HaveObjectsToPut;
     public Texture2D objectMap;
     public GameObject[] objectToPut;
+
+    [Header("Terrain Animation")]
+
+    public bool DoAnimation;
+    //first wave
+    public float aniHeightScale1 = 3;
+    public float aniPeriodScale1 = 4;
+    public float aniTimeScale1 = 2;
+
+    //second wave
+    public float aniHeightScale2 = 2;
+    public float aniPeriodScale2 = 2;
+    public float aniTimeScale2 = 2;
+
 
     // other things
     MeshFilter meshFilter;
@@ -102,7 +114,7 @@ public class TerrainGeneration : MonoBehaviour
                         objectPosB.Add(new Vector3(x, yVal * heightScale, z));
                     }
                 }
-                
+
                 vertexColours.Add(getMappedColour(yVal));
             }
         }
@@ -168,4 +180,48 @@ public class TerrainGeneration : MonoBehaviour
 
     }
 
+    private void Update()
+    {
+        int height = heightMapTexture.height;
+        int width = heightMapTexture.width;
+
+        List<Vector3> aniVertices = new List<Vector3>();
+        List<Vector3> staticVertices = new List<Vector3>();
+
+        for (int z = 0; z < height; z++)
+        {
+            for (int x = 0; x < width; x++)
+            {
+
+                float yVal = heightMapTexture.GetPixel(x, z).r;
+
+
+                if (yVal == 0)
+                {
+                    float xNorm = (float)x / (float)width;
+
+                    float y1 = (Mathf.Sin(xNorm * 2 * Mathf.PI * aniPeriodScale1 + Time.timeSinceLevelLoad * aniTimeScale1) * aniHeightScale1);
+
+                    float y2 = (Mathf.Sin(xNorm * 2 * Mathf.PI * aniPeriodScale2 + Time.timeSinceLevelLoad * aniTimeScale2) * aniHeightScale2);
+
+                    float y = (y1 + y2);
+
+                    aniVertices.Add(new Vector3(x, y, z));
+
+                }
+                else
+                {
+                    aniVertices.Add(new Vector3(x, yVal * heightScale, z));
+                }
+
+
+
+            }
+        }
+
+        meshFilter.mesh.vertices = aniVertices.ToArray();
+
+        meshFilter.mesh.RecalculateNormals();
+
+    }
 }
