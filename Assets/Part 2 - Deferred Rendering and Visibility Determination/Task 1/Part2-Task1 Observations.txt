@@ -1,0 +1,28 @@
+Island Terrain:
+
+Visual difference: Not too much, almost same;
+
+Performance difference: 
+
+Forward: Batches: 136; Tris: 88.0k; Verts: 95.7k; SetPass calls:98; FPS around 1260~1320;
+Deferred: Batches: 65; Tris: 32.6k; Verts: 36.9k; SetPass calls: 28; FPS around 1360~1410;
+
+------------------------------------------------------------------------
+Mars Terrain:
+
+Visual difference: Deferred is much better than foward; can show all the light sources correctly;
+
+Performance difference: 
+
+Forward: Batches: 60; Tris: 809.5k; Verts: 450.3k; SetPass calls: 49; FPS around 1800~2050;
+Deferred: Batches: 39; Tris: 270.6k; Verts: 152.2k; SetPass calls:28; FPS around 1650~1750;
+
+------------------------------------------------------------------------
+Lake Terrain:
+
+Visual difference: Deferred shows bighter than forward;
+
+Performance difference:
+
+Forward: Batches: 9; Tris: 782.0k; Verts: 398.3k; SetPass calls: 9; FPS around 1840~1960;
+Deferred: Batches: 13; Tris: 262.1k; Verts: 136.3k; SetPass calls: 13; FPS around 1750~1880;
