@@ -756,6 +756,26 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 264761220}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &269410339 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4335068734011107865, guid: eeade5eac92f39e439a9bf65b8f4007c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1218431985}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &269410342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 269410339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52f7274fb51a264aa0ad324568c30a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightController: {fileID: 1535521977}
+  sun: {fileID: 705507993}
 --- !u!1001 &296575804
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1109,6 +1129,7 @@ GameObject:
   m_Component:
   - component: {fileID: 457211353}
   - component: {fileID: 457211354}
+  - component: {fileID: 457211355}
   m_Layer: 0
   m_Name: Point Light (2)
   m_TagString: Untagged
@@ -1191,6 +1212,20 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &457211355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 457211352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52f7274fb51a264aa0ad324568c30a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightController: {fileID: 1535521977}
+  sun: {fileID: 705507993}
 --- !u!1 &513817879 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4987533840923468432, guid: 9d20dd29c4cd94543905b0b4c642231c,
@@ -1617,6 +1652,7 @@ GameObject:
   m_Component:
   - component: {fileID: 723579518}
   - component: {fileID: 723579519}
+  - component: {fileID: 723579520}
   m_Layer: 0
   m_Name: Area Light (1)
   m_TagString: Untagged
@@ -1699,6 +1735,20 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &723579520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 723579517}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52f7274fb51a264aa0ad324568c30a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightController: {fileID: 1535521977}
+  sun: {fileID: 705507993}
 --- !u!1001 &738232634
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1796,6 +1846,7 @@ GameObject:
   m_Component:
   - component: {fileID: 740791846}
   - component: {fileID: 740791847}
+  - component: {fileID: 740791848}
   m_Layer: 0
   m_Name: Area Light (2)
   m_TagString: Untagged
@@ -1878,6 +1929,20 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &740791848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 740791845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52f7274fb51a264aa0ad324568c30a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightController: {fileID: 1535521977}
+  sun: {fileID: 705507993}
 --- !u!1001 &749993203
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2198,7 +2263,7 @@ Camera:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_RenderingPath: -1
+  m_RenderingPath: 3
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
   m_TargetEye: 3
@@ -2233,6 +2298,7 @@ GameObject:
   m_Component:
   - component: {fileID: 998644129}
   - component: {fileID: 998644130}
+  - component: {fileID: 998644131}
   m_Layer: 0
   m_Name: Area Light
   m_TagString: Untagged
@@ -2315,6 +2381,20 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &998644131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 998644128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52f7274fb51a264aa0ad324568c30a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightController: {fileID: 1535521977}
+  sun: {fileID: 705507993}
 --- !u!1001 &1003219670
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2801,6 +2881,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9089833399d245f409c1cb160dae388a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1222977836 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4335068734011107865, guid: eeade5eac92f39e439a9bf65b8f4007c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1143321931}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1222977839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1222977836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52f7274fb51a264aa0ad324568c30a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightController: {fileID: 1535521977}
+  sun: {fileID: 705507993}
 --- !u!1 &1261564809
 GameObject:
   m_ObjectHideFlags: 0
@@ -2918,6 +3018,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1261598242}
   - component: {fileID: 1261598243}
+  - component: {fileID: 1261598244}
   m_Layer: 0
   m_Name: Point Light
   m_TagString: Untagged
@@ -3000,6 +3101,20 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &1261598244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1261598241}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52f7274fb51a264aa0ad324568c30a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightController: {fileID: 1535521977}
+  sun: {fileID: 705507993}
 --- !u!1001 &1337704840
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3105,6 +3220,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9089833399d245f409c1cb160dae388a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1366949795 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4335068734011107865, guid: eeade5eac92f39e439a9bf65b8f4007c,
+    type: 3}
+  m_PrefabInstance: {fileID: 749993203}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1366949798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1366949795}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52f7274fb51a264aa0ad324568c30a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightController: {fileID: 1535521977}
+  sun: {fileID: 705507993}
 --- !u!1001 &1407553953
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4220,6 +4355,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9089833399d245f409c1cb160dae388a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1659515120 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4335068734011107865, guid: eeade5eac92f39e439a9bf65b8f4007c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1561347018}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1659515123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1659515120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52f7274fb51a264aa0ad324568c30a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightController: {fileID: 1535521977}
+  sun: {fileID: 705507993}
 --- !u!1001 &1688479340
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4295,7 +4450,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 895162916999ee34babda7b3289cdf13,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 895162916999ee34babda7b3289cdf13, type: 3}
@@ -4581,6 +4736,26 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1763870855}
   m_Enabled: 0
+--- !u!1 &1819519376 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4335068734011107865, guid: eeade5eac92f39e439a9bf65b8f4007c,
+    type: 3}
+  m_PrefabInstance: {fileID: 127443570}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1819519379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1819519376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52f7274fb51a264aa0ad324568c30a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightController: {fileID: 1535521977}
+  sun: {fileID: 705507993}
 --- !u!1001 &1863421830
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5158,7 +5333,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 5e6cfe1081dd77c4abccda64dcc954d7,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5e6cfe1081dd77c4abccda64dcc954d7, type: 3}
@@ -5178,6 +5353,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2052238619}
   - component: {fileID: 2052238620}
+  - component: {fileID: 2052238621}
   m_Layer: 0
   m_Name: Point Light (1)
   m_TagString: Untagged
@@ -5260,6 +5436,20 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &2052238621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2052238618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52f7274fb51a264aa0ad324568c30a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightController: {fileID: 1535521977}
+  sun: {fileID: 705507993}
 --- !u!1 &2072682966
 GameObject:
   m_ObjectHideFlags: 0

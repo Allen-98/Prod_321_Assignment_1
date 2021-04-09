@@ -27,7 +27,7 @@ public class LightController : MonoBehaviour
 
         result = ((angle / 360) - Mathf.Floor(angle / 360)) * 360;
 
-        Debug.Log(result);
+        //Debug.Log(result);
 
         if (result >= 0 && result < 180)
         {
